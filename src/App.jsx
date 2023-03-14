@@ -1,6 +1,6 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
-import Nav from "./assets/nav";
+import Nav from "./nav";
 
 function App() {
   const [count, setCount] = useState(0);
