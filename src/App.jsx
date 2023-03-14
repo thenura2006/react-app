@@ -1,13 +1,9 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
-import Nav from "./nav";
+import Nav, { data } from "./Nav.jsx";
 
 function App() {
-  const [count, setCount] = useState(0);
-  if (count < 0) {
-    setCount(count + 1);
-  }
-  return <Nav name={nav.auther} />;
+  return <Nav name={data.name} />;
 }
 
 export default App;

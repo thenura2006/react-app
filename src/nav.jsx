@@ -1,13 +1,12 @@
 import react from "react";
 
 export default function Nav(props) {
-  <div>
-    <h1>{props.auther.name}</h1>
-  </div>;
+  return (
+    <div>
+      <h1>{props.name}</h1>
+    </div>
+  );
 }
-
-const nav = {
-  auther: {
-    name: "thenura",
-  },
+const data = {
+  name: "thenura",
 };
