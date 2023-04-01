@@ -1,19 +1,26 @@
-import { useState } from "react";
+import { useState, Component } from "react";
 import reactLogo from "./assets/react.svg";
-import Nav from "./Nav";
-
-function App() {
-  const [count, setCount] = useState("hello");
-  function handle() {
-    setCount("thankyou");
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "false",
+    };
+  }
+  click() {
+    this.setState({
+      name: "hello",
+    });
   }
 
-  return (
-    <div>
-      <button onClick={handle}>{count}</button>
-      <Nav />
-    </div>
-  );
+  render() {
+    return (
+      <div>
+        <h1></h1>
+        <button onClick={this.click.bind(this)}>{this.state.name}</button>
+      </div>
+    );
+  }
 }
 
 export default App;
