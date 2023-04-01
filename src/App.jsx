@@ -1,9 +1,19 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
-import Nav, { data } from "./Nav.jsx";
+import Nav from "./Nav";
 
 function App() {
-  return <Nav name={data.name} />;
+  const [count, setCount] = useState("hello");
+  function handle() {
+    setCount("thankyou");
+  }
+
+  return (
+    <div>
+      <button onClick={handle}>{count}</button>
+      <Nav />
+    </div>
+  );
 }
 
 export default App;
